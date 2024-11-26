@@ -20,6 +20,8 @@ public class Guest {
     private String permanentAddress;
     private String password;
     private Map<String, Object> keys;
+    private String status;
+    
 	public int getGuestId() {
 		return guestId;
 	}
@@ -80,12 +82,24 @@ public class Guest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Map<String, Object> getKeys() {
+		return keys;
+	}
+	public void setKeys(Map<String, Object> keys) {
+		this.keys = keys;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
 		return "Guest [guestId=" + guestId + ", firstName=" + firstName + ", lasName=" + lasName + ", email=" + email
 				+ ", pgName=" + pgName + ", roomNo=" + roomNo + ", roomSharing=" + roomSharing + ", phonenumber="
-				+ phonenumber + ", permanentAddress=" + permanentAddress + ", password=" + password + "]";
-	}
-    
+				+ phonenumber + ", permanentAddress=" + permanentAddress + ", password=" + password + ", keys=" + keys
+				+ ", status=" + status + "]";
+	} 
     
 }

@@ -13,4 +13,10 @@ public interface GuestRepository extends MongoRepository<Guest,String> {
 	@Query(value= "{'guestId' : ?0}")
 	Optional<Guest> findByGuestId(int guestId);
 	
+	@Query(value = "{'email' : ?0, 'password' : ?1}")
+	Optional<Guest> findByemailAndPassword(String email, String password);
+	
+	@Query(value = "{'email' : ?0}")
+	Optional<Guest> findByEmail(String email);
+
 }
